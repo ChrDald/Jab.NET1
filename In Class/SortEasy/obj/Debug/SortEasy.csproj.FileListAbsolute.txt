@@ -1,0 +1,6 @@
+C:\Users\1796146\Desktop\My.NETRepo\In Class\SortEasy\bin\Debug\SortEasy.exe.config
+C:\Users\1796146\Desktop\My.NETRepo\In Class\SortEasy\bin\Debug\SortEasy.exe
+C:\Users\1796146\Desktop\My.NETRepo\In Class\SortEasy\bin\Debug\SortEasy.pdb
+C:\Users\1796146\Desktop\My.NETRepo\In Class\SortEasy\obj\Debug\SortEasy.csproj.CoreCompileInputs.cache
+C:\Users\1796146\Desktop\My.NETRepo\In Class\SortEasy\obj\Debug\SortEasy.exe
+C:\Users\1796146\Desktop\My.NETRepo\In Class\SortEasy\obj\Debug\SortEasy.pdb

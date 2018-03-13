@@ -1,0 +1,7 @@
+C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\JustNumbers\bin\Debug\JustNumbers.exe.config
+C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\JustNumbers\bin\Debug\JustNumbers.exe
+C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\JustNumbers\bin\Debug\JustNumbers.pdb
+C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\JustNumbers\obj\Debug\JustNumbers.csproj.CoreCompileInputs.cache
+C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\JustNumbers\obj\Debug\JustNumbers.exe
+C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\JustNumbers\obj\Debug\JustNumbers.pdb
+C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\JustNumbers\obj\Debug\JustNumbers.csprojResolveAssemblyReference.cache
