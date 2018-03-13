@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexerPrimes", "IndexerPrimes.csproj", "{FC42BC47-FEDA-44A8-BF62-A4D859718C7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortEasy", "..\..\SortEasy\SortEasy.csproj", "{D8618DEA-FB9E-43FC-8DFA-08011E4FB058}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FC42BC47-FEDA-44A8-BF62-A4D859718C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC42BC47-FEDA-44A8-BF62-A4D859718C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC42BC47-FEDA-44A8-BF62-A4D859718C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8618DEA-FB9E-43FC-8DFA-08011E4FB058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8618DEA-FB9E-43FC-8DFA-08011E4FB058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8618DEA-FB9E-43FC-8DFA-08011E4FB058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8618DEA-FB9E-43FC-8DFA-08011E4FB058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

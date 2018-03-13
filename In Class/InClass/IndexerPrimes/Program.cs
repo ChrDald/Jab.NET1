@@ -17,7 +17,7 @@ namespace IndexerPrimes
             return true;
         }
 
-        // indexer use
+        /*
         public bool this[int number]
         {
             get
@@ -25,6 +25,18 @@ namespace IndexerPrimes
                 for (int i = 2; i < number; i++)
                 {
                     if (number % i == 0 && i != number) return false;
+                }
+                return true;
+            }
+        }
+        */
+        public long this[int number]    // return the Nth (number) prime number
+        {
+            get
+            {
+                for (int i = 2; i < number; i++)
+                {
+                    if (number % i == 0 && i != number)
                 }
                 return true;
             }
