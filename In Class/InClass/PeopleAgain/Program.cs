@@ -35,6 +35,9 @@ namespace PeopleAgain
                 }
                 else
                 {
+
+                }
+                {
                     PName = value;
                 }
             }
