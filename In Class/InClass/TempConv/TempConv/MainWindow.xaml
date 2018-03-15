@@ -1,0 +1,16 @@
+﻿<Window x:Class="TempConv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TempConv"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="109.804" Width="289.706" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Celcius" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.545" Margin="165,10,0,0" Width="113" Name="lblCelcius"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" TextChanged="TextBox_TextChanged" Name="tbCelcius" />
+        <Button Name="btConvert" Click="btConvert_Click" Content="Convert to Fahrenheit" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="-0.574,-2.493" Height="26"/>
+        <Label Name="lblFahrenheit" Content="Fahrenheit" HorizontalAlignment="Left" Margin="165,41,0,0" VerticalAlignment="Top" Width="113"/>
+
+    </Grid>
+</Window>
