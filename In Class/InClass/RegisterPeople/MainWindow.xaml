@@ -13,6 +13,10 @@
         <Label Name="lblPets" Content="Pets" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="126"/>
         <Label Name="lblContinent" Content="Continent" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="126"/>
         <Button Name="btRegister" Content="Register" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="126"/>
+        <TextBlock HorizontalAlignment="Left" Margin="141,15,0,0" TextWrapping="Wrap" Text="2-50 Chars constraint" VerticalAlignment="Top" Width="149"/>
+        <TextBlock HorizontalAlignment="Left" Margin="141,41,0,0" TextWrapping="Wrap" Text="Numerical only, &gt; 0" VerticalAlignment="Top" Width="149"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="141,78,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="231,78,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

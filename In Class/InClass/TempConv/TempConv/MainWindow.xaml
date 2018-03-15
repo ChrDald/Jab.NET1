@@ -11,6 +11,7 @@
         <TextBox HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" TextChanged="TextBox_TextChanged" Name="tbCelcius" />
         <Button Name="btConvert" Click="btConvert_Click" Content="Convert to Fahrenheit" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="-0.574,-2.493" Height="26"/>
         <Label Name="lblFahrenheit" Content="Fahrenheit" HorizontalAlignment="Left" Margin="165,41,0,0" VerticalAlignment="Top" Width="113"/>
+        <TextBlock HorizontalAlignment="Left" Margin="109,21,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
