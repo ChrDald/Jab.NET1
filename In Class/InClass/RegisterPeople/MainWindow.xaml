@@ -6,17 +6,27 @@
         xmlns:local="clr-namespace:RegisterPeople"
         mc:Ignorable="d"
         Title="Register People" Height="350" Width="525">
-    <Grid>
+    <Grid HorizontalAlignment="Left" Width="517">
         <Label Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="126"/>
         <Label Name="lblAge" Content="Age" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.725,0.307" Width="126"/>
         <Label Name="lblGender" Content="Gender" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="126"/>
         <Label Name="lblPets" Content="Pets" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="126"/>
         <Label Name="lblContinent" Content="Continent" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="126"/>
-        <Button Name="btRegister" Content="Register" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="126"/>
-        <TextBlock HorizontalAlignment="Left" Margin="141,15,0,0" TextWrapping="Wrap" Text="2-50 Chars constraint" VerticalAlignment="Top" Width="149"/>
-        <TextBlock HorizontalAlignment="Left" Margin="141,41,0,0" TextWrapping="Wrap" Text="Numerical only, &gt; 0" VerticalAlignment="Top" Width="149"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="141,78,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="231,78,0,0" VerticalAlignment="Top"/>
+        <Button Name="btRegister" Click="btRegister_Click" Content="Register" HorizontalAlignment="Left" Margin="187,187,0,0" VerticalAlignment="Top" Width="126"/>
+        <TextBox Name="tbName" HorizontalAlignment="Left" Margin="141,15,0,0" TextWrapping="Wrap" Text="2-50 Chars constraint" VerticalAlignment="Top" Width="149"/>
+        <TextBox Name="tbAge" HorizontalAlignment="Left" Margin="141,41,0,0" TextWrapping="Wrap" Text="Numerical only, &gt; 0" VerticalAlignment="Top" Width="149"/>
+        <RadioButton Name="rbGender_Male" Content="Male&#x9;" HorizontalAlignment="Left" Margin="141,78,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbGender_Female" Content="Female" HorizontalAlignment="Left" Margin="231,78,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbGender_Other" Content="Other?" HorizontalAlignment="Left" Margin="321,78,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="cbPets_Cat" Content="Cat(s)" HorizontalAlignment="Left" Margin="141,109,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="cbPets_Dog" Content="Dog(s)" HorizontalAlignment="Left" Margin="231,109,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="cbPets_Other" Content="Other(s)" HorizontalAlignment="Left" Margin="321,109,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbContinent" HorizontalAlignment="Left" Margin="141,138,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="America" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Africa" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Eurasia" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Oceania" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
 
     </Grid>
 </Window>
