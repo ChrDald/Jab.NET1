@@ -61,6 +61,10 @@ namespace PeopleAgain
                 
             }
         }
+        public override string ToString()
+        {
+            return ("Name: " + Name + " Age: " + Age);
+        }
     }
         
 
@@ -185,15 +189,110 @@ namespace PeopleAgain
 
         static void Main(string[] args)
         {
-            
-            Student student = new Student("El student", 100, "Program", 3.2);
+            try
+            {
+                String[] fileLines = File.ReadAllLines(@"people.txt");
+                String type = null;
+                String name;
+                String age;
 
-            Teacher teach = new Teacher("El teacher", 50, "Stuffs", 12);
+                foreach (String lines in fileLines)
+                {
+                    // check if line contains valid data first 
+                    // first get rid of the empty lines
+                    String CurrentLine = lines.Trim();
+                    if (CurrentLine == "")
+                    {
+                        continue;
+                    }
+                    // next check if the "person type" is correct
 
-            Console.WriteLine(teach.ToString());
-            Console.WriteLine(student.ToString());
-            Console.ReadKey();
+                    String[] peopleType = lines.Split(':'); // has to be SINGLE quotes here (google why)
+                    String[] peopleNames = peopleType[1].Split(',');
+                    
+                    if (peopleNames.Length < 2)
+                    {
+                        continue;
+                    }
+                    else if (peopleNames.Length < 3) // for people of type "Person"
+                    {
+                        try
+                        {
+                            type = peopleType[0];
+                        }
+                        catch (IndexOutOfRangeException)
+                        {
+                            Console.WriteLine("Index out of bounds @ String type = peopleType[0];");
+                        }
 
+                        // verify the type is valid (ex. not "Cookie")
+                        if (!type.Equals("Person") && !type.Equals("Student") && !type.Equals("Teacher"))
+                        {
+                            Console.WriteLine(type + " --> Skipping invalid data...");
+                            continue;
+                        }
+                        name = peopleNames[0];
+                        age = peopleNames[1];
+                        Person person = new Person(name, Int32.Parse(age)); // maybe handle this possible excetion?
+                        PeopleList.Add(person);
+                    }
+
+                    else // for type "Student" or "Teacher"
+                    {
+                        type = peopleType[0];
+                        if (!type.Equals("Person") && !type.Equals("Student") && !type.Equals("Teacher"))
+                        {
+                            Console.WriteLine(type + " --> Skipping invalid data...");
+                            continue;
+                        }
+
+                        name = peopleNames[0];
+                        age = peopleNames[1];
+
+                        if (type.Equals("Student"))
+                        {
+                            // for students get GPA and Program (peopleNames[2 and 3])
+                            Console.WriteLine("People Names [2]: " + peopleNames[2]);
+                            Console.WriteLine("People Names [3]: " + peopleNames[3]);
+                            try
+                            {
+                                double GPA = double.Parse(peopleNames[2]); // check for exceptions
+                                String Program = peopleNames[3];
+                                Student student = new Student(name, Int32.Parse(age), Program, GPA);
+                                PeopleList.Add(student);
+                            } catch (InvalidDataException)
+                            {
+                                // **NOTE** for SOME REASON, ALFRED IS THROWING THIS ERROR GOD KNOWS WHY
+                                Console.WriteLine("Invalid Data Exception...");
+                                continue;
+                            }
+                            
+
+                        }
+                        else if (type.Equals("Teacher"))
+                        {
+                            // for teachers get Subject and Experience
+
+                            String Subject = peopleNames[2];
+                            int YearsOfExp = Int32.Parse(peopleNames[3]);
+
+                            Teacher teacher = new Teacher(name, Int32.Parse(age), Subject, YearsOfExp);
+                            PeopleList.Add(teacher);
+                        }
+                    }
+
+                }
+                
+                foreach (Person person in PeopleList)
+                {
+                    Console.Write(person.ToString());
+                }
+                
+                Console.ReadKey();
+            } catch (Exception)
+            {
+                Console.WriteLine("IO Error (probably)");
+            }         
             
         }
     }

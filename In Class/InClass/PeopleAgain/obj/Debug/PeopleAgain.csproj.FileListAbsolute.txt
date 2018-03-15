@@ -5,3 +5,10 @@ C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\Peopl
 C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\PeopleAgain.csproj.CoreCompileInputs.cache
 C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\PeopleAgain.exe
 C:\Users\1796146\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\PeopleAgain.pdb
+C:\Users\D\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\bin\Debug\PeopleAgain.exe.config
+C:\Users\D\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\bin\Debug\PeopleAgain.exe
+C:\Users\D\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\bin\Debug\PeopleAgain.pdb
+C:\Users\D\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\PeopleAgain.csprojResolveAssemblyReference.cache
+C:\Users\D\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\PeopleAgain.csproj.CoreCompileInputs.cache
+C:\Users\D\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\PeopleAgain.exe
+C:\Users\D\Desktop\My.NETRepo\In Class\InClass\PeopleAgain\obj\Debug\PeopleAgain.pdb
