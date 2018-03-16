@@ -1,0 +1,24 @@
+﻿<Window x:Class="ScoopSelection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScoopSelection"
+        mc:Ignorable="d"
+        Title="Scoop Selection" Height="350" Width="525">
+    <Grid>
+        <Label Content="Flavours:" HorizontalAlignment="Left" Margin="40,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Selected:" HorizontalAlignment="Left" Margin="361,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.717,0.135"/>
+        <ListBox Name="lstFlavours" HorizontalAlignment="Left" Height="141" Margin="10,61,0,0" VerticalAlignment="Top" Width="175">
+            <ListBoxItem Content="Vanilla"/>
+            <ListBoxItem Content="Chocolate"/>
+            <ListBoxItem Content="Strawberry"/>
+            <ListBoxItem Content="Peach"/>
+        </ListBox>
+        <ListBox Name="lstSelected" HorizontalAlignment="Left" Height="141" Margin="332,61,0,0" VerticalAlignment="Top" Width="175"/>
+        <Button Name="btAdd" Click="btAdd_Click" Content="Add Selected =&gt;" HorizontalAlignment="Left" Margin="208,120,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.392,0.675"/>
+        <Button Name="btDelete" Click="btDelete_Click" Content="Delete Scoop" HorizontalAlignment="Left" Margin="332,207,0,0" VerticalAlignment="Top" Width="86"/>
+        <Button Name="btClear" Click="btClear_Click" Content="Clear All" HorizontalAlignment="Left" Margin="332,232,0,0" VerticalAlignment="Top" Width="86"/>
+
+    </Grid>
+</Window>
