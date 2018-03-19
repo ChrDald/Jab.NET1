@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotepadClone"
         mc:Ignorable="d"     
-    Title="MainWindow" Height="363.75" Width="533.75">
+    Title="MainWindow" Height="363.75" Width="533.75" Closing="Window_Closing">
 
     <Grid>
         <DockPanel>

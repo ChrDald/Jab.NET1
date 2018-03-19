@@ -1,0 +1,10 @@
+den1.mysql2.gear.host
+
+db name:
+dotnetdb
+
+user name:
+dotnetdb
+
+pass:
+Ah6G?9W?uU94

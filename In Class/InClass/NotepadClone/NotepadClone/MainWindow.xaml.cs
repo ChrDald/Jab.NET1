@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+// Note this is not quite finished, need to fix up some functions
+
 namespace NotepadClone
 {
     /// <summary>
@@ -91,7 +93,7 @@ namespace NotepadClone
             if (unSaved == true)
             {
 
-                MessageBoxResult result = MessageBox.Show("UnunSaved Changes, do you really want to quit?", "Warning", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+                MessageBoxResult result = MessageBox.Show("Unsaved Changes, do you really want to quit?", "Warning", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
                 if (result == MessageBoxResult.Cancel)
                 {
                     return;
@@ -108,6 +110,11 @@ namespace NotepadClone
         {
             // when textbox content is changed, set the boolean "unSaved" to false, so no data is lost
             unSaved = true;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }
