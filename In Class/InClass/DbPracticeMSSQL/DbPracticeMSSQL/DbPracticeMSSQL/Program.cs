@@ -11,18 +11,16 @@ namespace DbPracticeMSSQL
     {
         static void Main(string[] args)
         {
-            String connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =\\jacstudents\students\1796146\FirstLocalDb.mdf; Integrated Security = True; Connect Timeout = 30";
+            String connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = 'C:\Users\D\Desktop\My.NETRepo\In Class\InClass\DbPracticeMSSQL\DbPracticeMSSQL\DbPracticeMSSQL\FileDB.mdf'; Integrated Security = True; Connect Timeout = 30";
 
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
 
             Console.WriteLine("Connected");
-            Console.ReadLine();
-
 
             //create command and assign the query and connection from the constructor
-            SqlCommand cmd = new SqlCommand("INSERT INTO Friends (Name) VALUES(@name)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Friends (Name) VALUES (@name)", conn);
             cmd.Parameters.AddWithValue("@name", "Test");
 
             //Execute command
@@ -36,9 +34,11 @@ namespace DbPracticeMSSQL
                 while (reader.Read())
                 {
                     Console.WriteLine(String.Format("{0}: {1}", reader[0], reader[1]));
+                  
                 }
+                Console.ReadLine();
             }
-
+            
         }
     }
 }
