@@ -1,0 +1,32 @@
+﻿<Window x:Class="NewPeopleDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewPeopleDB"
+        mc:Ignorable="d"
+        Title="People" Height="350" Width="605">
+    <Grid>
+        <ListView Name="LstbPeople" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="346">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Age" Width="50" DisplayMemberBinding="{Binding Age}" />
+                    <GridViewColumn Header="Height" Width="150" DisplayMemberBinding="{Binding Height}" />
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+        <Label Name="LblID" Content="ID:" HorizontalAlignment="Left" Margin="361,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.646,2.308" Width="48"/>
+        <Label Name="LblName" Content="Name:" HorizontalAlignment="Left" Margin="361,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.021,3.587" Width="48"/>
+        <Label Name="LblAge" Content="Age:" HorizontalAlignment="Left" Margin="361,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.603,-0.76" Width="48"/>
+        <Label Name="LblHeight" Content="Height:" HorizontalAlignment="Left" Margin="361,105,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="TblID" HorizontalAlignment="Left" Margin="409,17,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="178"/>
+        <TextBox Name="TbName" HorizontalAlignment="Left" Margin="409,48,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="178"/>
+        <TextBox Name="TbAge" HorizontalAlignment="Left" Margin="409,79,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="178"/>
+        <Slider Name="SldHeight" Maximum="300" Minimum="30" TickPlacement="BottomRight" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Margin="409,113,0,0" VerticalAlignment="Top" Width="178"/>
+        <Button Click="BtAdd_Click" Name="BtAdd" Content="Add" HorizontalAlignment="Left" Margin="361,155,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.067,-0.188"/>
+        <Button Name="BtUpdate" Content="Update" HorizontalAlignment="Left" Margin="441,155,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
