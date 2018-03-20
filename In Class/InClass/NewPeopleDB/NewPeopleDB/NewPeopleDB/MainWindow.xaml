@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="People" Height="350" Width="605">
     <Grid>
-        <ListView Name="LstbPeople" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="346">
+        <ListView Name="LstbPeople" SelectionChanged="LstbPeople_SelectionChanged" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="346">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete" Click="MenuItem_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />

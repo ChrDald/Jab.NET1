@@ -59,5 +59,38 @@ namespace NewPeopleDB
             db.AddPerson(p);
             LoadList();
         }
+
+        private void LstbPeople_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (LstbPeople.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            try
+            {
+                People selectedPerson = (People)LstbPeople.SelectedItem;
+                TbName.Text = selectedPerson.Name;
+                TbAge.Text = selectedPerson.Age + "";
+                SldHeight.Value = (int)selectedPerson.Height;
+
+            } catch (InvalidCastException)
+            {
+                MessageBox.Show("Invalid casting @ selection changed");
+                return;
+            }                    
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            // NOTE i decided not to use the ID, bad decision... pretend im using ID instead of Name to delete
+            if (LstbPeople.SelectedIndex == -1)
+            {
+                return;
+            }
+            People selectedPerson = (People)LstbPeople.SelectedItem;
+            db.DeletePerson(selectedPerson);
+            LoadList();
+        }
     }
 }

@@ -76,8 +76,26 @@ namespace NewPeopleDB
             {
                 throw new Exception("SQL Exception, check your insert data");
             }
-            
+
         }
+
+        public void DeletePerson(People p)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("DELETE FROM People WHERE Name = @Name AND Age = @Age AND Height = @Height", conn);
+                cmd.Parameters.AddWithValue("@Name", p.Name);
+                cmd.Parameters.AddWithValue("@Age", p.Age);
+                cmd.Parameters.AddWithValue("@Height", p.Height);
+
+                cmd.ExecuteNonQuery();
+            } catch (SqlException)  // not sure if this works?
+            {
+                throw new Exception("SQL Exception, check your delete data");
+            }
+        }
+
+
     }
 }
 
