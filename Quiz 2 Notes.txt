@@ -1,0 +1,82 @@
+*First if using a database, make a seperate database class first with all CRUD methods
+*Then make a Globals class where anything used across the program will be (example the database instance)
+*(Note see the TodoDBCustDlg solution in the teacher's repo)
+
+Example globals class:
+
+namespace TodoDBCustDlg
+{
+    class Globals
+    {
+        public static Database db;
+    }
+}
+
+Database class:
+
+namespace TodoDBCustDlg
+{
+    class Database
+    {
+        private SqlConnection conn;
+
+        public Database()
+        {
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\teacher\Documents\2018-ipd12-dotnet\TodoDBCustDlg\TodoDB.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+        }
+
+
+*If youre dealing with objects (like "friends" or "todos" or anything other than primitive data types,
+	make them into their class obviously
+
+*If you want to make a dialog or window non resizeable, add in the Title xaml ResizeMode="NoResize"
+
+*For dates use DatePicker (gonna have to google how to use that)
+
+============================================
+
+*Custom Dialogs
+
+*Design the window
+
+*Show the dialog always using
+
+if (dlg.ShowDialog() == true)
+{
+}
+
+*If you want to pass info to the dialog, you can add a parameter in the dialog's constructer,
+ex. add an object in the parameter, if the object is null then empty all fields, else you fill
+the fields with the info in that object.
+
+**Since the dialog wont pass anything back to the main window in this case, you can instead use globals
+example, you pass a "Friend" object to the dialog, the dialog either changes it or creates a new "Friend",
+THEN still in the dialog code, add that friend to your database.
+
+if the dialog operations are succesful, you always finish with:
+DialogResult = true;
+
+if for example user clicks cancel, 
+DialogResult = false;
+
+Then when the dialog is closed, if the result is "true", you can for example reload the items in the database
+
+======================================
+
+*Note look up .ItemsSource
+
+ex. 
+lvTodos.ItemsSource = Globals.db.GetAllTodos();
+
+where lvTodos is a listView and GetAllTodos returns a collection of objects
+
+i believe this calls the .toString() method of those objects which you override in the object's toString method
+and adds those .toString items to the listView in this case
+
+*Note look up SQL Convert (used in the database class)
+
+*If you need to return the ID of an item just added to the database, see again the Database class
+in the Teacher's custom dialog solution, specifically the AddTodo method
+
+*Note check SqlDbType for adding paramaters in database methods
