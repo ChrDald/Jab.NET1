@@ -1,3 +1,5 @@
+Tutorials site -> http://www.wpf-tutorial.com/
+
 *First if using a database, make a seperate database class first with all CRUD methods
 *Then make a Globals class where anything used across the program will be (example the database instance)
 *(Note see the TodoDBCustDlg solution in the teacher's repo)
@@ -62,6 +64,10 @@ DialogResult = false;
 
 Then when the dialog is closed, if the result is "true", you can for example reload the items in the database
 
+*Btw, not sure if you NEED to do this but might as well? On the OK and CANCEL buttons, if you have them, in the
+xaml for cancel add property IsCancel="True"/> --> when the button is clicked the dialog closes and dialogresult = false;
+for an OK button, you need to write the code in c#, you can set the property IsDefault = true (to set the default button,
+if the user hits enter that button is pressed). The code needs to have dialogresult = true at some point
 ======================================
 
 *Note look up .ItemsSource
