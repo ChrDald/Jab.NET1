@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I've made a patch. \nI see there is not very much activity on the project, also the license terms are not clear. why don't you bang it under a BSD license or something?\nI would probably maintain/add to it if that was the case. \nI'm going to post the patch anyhow. \nIt makes it a bit nicer and adds a double click to copy feature.",
+    "LastUpdatedDate": "2013-02-14T11:06:43.323-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "Ruler",
+    "ReportedDate": "2010-11-18T09:53:31.72-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "i've made a patch",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 14711
+  },
+  "FileAttachments": [
+    {
+      "FileId": 5151,
+      "FileName": "MainForm.diff",
+      "DownloadUrl": ".\\5151"
+    }
+  ],
+  "Comments": []
+}

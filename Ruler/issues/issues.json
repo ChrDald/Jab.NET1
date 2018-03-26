@@ -1,0 +1,54 @@
+[
+  {
+    "Id": 9225,
+    "Title": "Minimise to Tray"
+  },
+  {
+    "Id": 9226,
+    "Title": "Different measurement units (cm, inc, mm, etc)"
+  },
+  {
+    "Id": 9227,
+    "Title": "Stretch instead of moving in certain situations"
+  },
+  {
+    "Id": 9228,
+    "Title": "Ability to set exact size"
+  },
+  {
+    "Id": 9229,
+    "Title": "Ability to quickly save and load  favourite dimensions/sizes"
+  },
+  {
+    "Id": 9236,
+    "Title": "Change icon"
+  },
+  {
+    "Id": 9237,
+    "Title": "Option to lock ruler"
+  },
+  {
+    "Id": 9238,
+    "Title": "Ability to copy current dimensions"
+  },
+  {
+    "Id": 9239,
+    "Title": "Add Installer"
+  },
+  {
+    "Id": 13482,
+    "Title": "Tooltip to show value when smaller than 20px"
+  },
+  {
+    "Id": 14711,
+    "Title": "i've made a patch"
+  },
+  {
+    "Id": 22271,
+    "Title": "Not rendering correctly on Windows 10"
+  },
+  {
+    "Id": 22469,
+    "Title": "Ruler gets 'dropped' when moved quickly"
+  }
+]

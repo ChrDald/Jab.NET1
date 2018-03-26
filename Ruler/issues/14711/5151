@@ -1,0 +1,122 @@
+Index: Source/MainForm.cs
+===================================================================
+--- Source/MainForm.cs	(revision 63825)
++++ Source/MainForm.cs	(working copy)
+@@ -25,6 +25,8 @@
+ 		private ContextMenu		_menu = new ContextMenu();
+ 		private MenuItem		_verticalMenuItem;
+ 		private MenuItem		_toolTipMenuItem;
++		private MenuItem		_clickToCopyMenuItem;
++		private Font 			_fontSmallerItalic = new Font("Tahoma", 8,FontStyle.Italic);
+ 
+ 		public MainForm()
+ 		{
+@@ -43,7 +45,7 @@
+ 			Opacity = 0.65;
+ 			ContextMenu = _menu;
+ 			Font = new Font("Tahoma", 10);
+-			
++
+ 			SetStyle(ControlStyles.DoubleBuffer | ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint, true);
+ 		}
+ 
+@@ -65,12 +67,30 @@
+ 				}
+ 			}
+ 		}
++		
++		private bool ClickToCopy
++		{
++			get { return _clickToCopyMenuItem.Checked; }
++			set
++			{
++				_clickToCopyMenuItem.Checked = value;
++				if (value)
++				{
++					SetToolTip();
++				}
++			}
++		}
++		
++		
++		
++		
+ 
+ 		private void SetUpMenu()
+ 		{
+ 			AddMenuItem("Stay On Top");
+ 			_verticalMenuItem = AddMenuItem("Vertical");
+ 			_toolTipMenuItem = AddMenuItem("Tool Tip");
++			_clickToCopyMenuItem = AddMenuItem("Click to Copy");
+ 			MenuItem opacityMenuItem = AddMenuItem("Opacity");
+ 			AddMenuItem("-");
+ 			AddMenuItem("About");
+@@ -168,6 +188,21 @@
+ 			_toolTip.SetToolTip(this, string.Format("Width: {0} pixels\nHeight: {1} pixels", Width, Height));
+ 		}
+ 
++		// Double clicking upon the toolbar copies the current width to the system clipboard
++		protected override void OnDoubleClick(EventArgs e)
++		{
++			base.OnDoubleClick(e);
++			if(IsVertical) {
++				Clipboard.SetText(string.Format("{0}", Height));
++			}
++			else {
++				Clipboard.SetText(string.Format("{0}", Width));
++			}
++			
++			
++		}
++		
++		
+ 		protected override void OnKeyDown(KeyEventArgs e)
+ 		{
+ 			switch (e.KeyCode)
+@@ -360,7 +395,7 @@
+ 			g.DrawRectangle(Pens.Black, 0, 0, formWidth - 1, formHeight - 1);
+ 	
+ 			// Width
+-			g.DrawString(formWidth + " pixels", Font, Brushes.Black, 10, (formHeight / 2) - (Font.Height / 2));
++			g.DrawString(" " + formWidth + " px", _fontSmallerItalic, Brushes.Black, 10, (formHeight / 2) - (Font.Height / 2));
+ 	
+ 			// Ticks
+ 			for (int i = 0; i < formWidth; i++)
+@@ -398,13 +433,20 @@
+ 
+ 		private void DrawTickLabel(Graphics g, string text, int xPos, int formHeight, int height)
+ 		{
+-			// Top
+-			g.DrawString(text, Font, Brushes.Black, xPos, height);
+-			
+-			// Bottom
+-			g.DrawString(text, Font, Brushes.Black, xPos, formHeight - height - Font.Height);
++			//Lets not have the top and bottom text overlapping
++			if((height  + (Font.Height * 2)) < (formHeight - Font.Height * .2)){
++				// Top
++				g.DrawString(text, Font, Brushes.Black, xPos, height);
++				// Bottom
++				g.DrawString(text, Font, Brushes.Black, xPos, formHeight - height - Font.Height);
++			}
++			else {
++				g.DrawString(text, Font, Brushes.Black, xPos, formHeight/2 - Font.Height /2);
++			}
+ 		}
+-
++		
++		// Need to set this attribute in order to access the system clipboard
++      	[System.STAThreadAttribute()] 
+ 		static void Main() 
+ 		{
+             Application.EnableVisualStyles();
+@@ -431,6 +473,10 @@
+ 				case "Tool Tip":
+ 					ShowToolTip = !ShowToolTip;
+ 					break;
++					
++				case "Click to Copy":
++					ClickToCopy = !ClickToCopy;
++					break;
+ 
+ 				case "Vertical":
+ 					ChangeOrientation();

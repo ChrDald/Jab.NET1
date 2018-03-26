@@ -1,0 +1,22 @@
+﻿<MindMap>
+  <MindMapData Key="/" Category="Root" Location="0 0" Text="Mind Map" />
+  <MindMapData Key="/ 2" ParentKey="/" Text="Key issues" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="Skyblue" LayoutId="Left" />
+  <MindMapData Key="/ 3" ParentKey="/" Text="Getting more time" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="Skyblue" LayoutId="Right" />
+  <MindMapData Key="/ 4" ParentKey="/" Text="More effective use" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="DarkSeaGreen" LayoutId="Right" />
+  <MindMapData Key="/ 5" ParentKey="/" Text="Time wasting" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="PaleVioletRed" LayoutId="Left" />
+  <MindMapData Key="/ 2/" ParentKey="/ 2" Text="Methods" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="Skyblue" LayoutId="Left" />
+  <MindMapData Key="/ 2/ 2" ParentKey="/ 2" Text="Deadlines" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="Skyblue" LayoutId="Left" />
+  <MindMapData Key="/ 2/ 3" ParentKey="/ 2" Text="Checkpoints" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="Skyblue" LayoutId="Left" />
+  <MindMapData Key="/ 4/" ParentKey="/ 4" Text="Planning" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="DarkSeaGreen" LayoutId="Right" />
+  <MindMapData Key="/ 4/ 2" ParentKey="/ 4" Text="Ways to focus" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="DarkSeaGreen" LayoutId="Right" />
+  <MindMapData Key="/ 4//" ParentKey="/ 4/" Text="Goals" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="DarkSeaGreen" LayoutId="Right" />
+  <MindMapData Key="/ 4// 2" ParentKey="/ 4/" Text="Priorities" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="DarkSeaGreen" LayoutId="Right" />
+  <MindMapData Key="/ 3/" ParentKey="/ 3" Text="Wake up early" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="Skyblue" LayoutId="Right" />
+  <MindMapData Key="/ 3/ 2" ParentKey="/ 3" Text="Delegation" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="Skyblue" LayoutId="Right" />
+  <MindMapData Key="/ 3/ 3" ParentKey="/ 3" Text="De-clutter" ToSpot="MiddleLeft" FromSpot="MiddleRight" LinkColor="Skyblue" LayoutId="Right" />
+  <MindMapData Key="/ 5/" ParentKey="/ 5" Text="Too many meetings?" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="PaleVioletRed" LayoutId="Left" />
+  <MindMapData Key="/ 5/ 2" ParentKey="/ 5" Text="Too much time spent on details" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="PaleVioletRed" LayoutId="Left" />
+  <MindMapData Key="/ 5/ 3" ParentKey="/ 5" Text="Email fatigue" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="PaleVioletRed" LayoutId="Left" />
+  <MindMapData Key="/ 5/ 3/" ParentKey="/ 5/ 3" Text="Check email less" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="PaleVioletRed" LayoutId="Left" />
+  <MindMapData Key="/ 5/ 3/ 2" ParentKey="/ 5/ 3" Text="Email filters" ToSpot="MiddleRight" FromSpot="MiddleLeft" LinkColor="PaleVioletRed" LayoutId="Left" />
+</MindMap>
